@@ -3,7 +3,7 @@ const karakterForm = document.querySelector("#karakter-form")
 const thisSemester = document.querySelector("#this-semester")
 const tidligereStandpunkt = document.querySelector("#tidligere-standpunkt")
 const submitBtn = document.querySelector("#submit-btn")
-const snittOutput = document.querySelector("#snitt-output");
+const resultat = document.querySelector("#resultat");
 var karakterer = document.forms[0];
 let karakterArray = [];
 let totalChecked
@@ -103,7 +103,7 @@ submitBtn.addEventListener("click", (x) => {
 
     let karakterArrayTall = karakterArray.map(Number);
 
-    snittOutput.textContent = karakterKalk(karakterArrayTall).toFixed(2);
+    resultat.textContent = karakterKalk(karakterArrayTall).toFixed(2);
 })
 
 // kaller funksjonen to ganger, én gang for hver av de to array-ene og fieldset-ene.

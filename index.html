@@ -4,34 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karakterkalkulator</title>
     <link rel="stylesheet" href="./style.css">
+    <title>Karakterkalkulator - Utvidelse</title>
 </head>
 
 <body>
     <main>
-        <img src="./media/smh.svg" alt="Min logo (Sivert)">
-        <h1>Karaktererkalkulator for 2IMI Kuben VGS</h1>
-        <p>Dette er en kalkulator for karaktersnitt.<br>Den regner ut snitt basert på alle karakterer, om du går
-            2IMI.<br>Rekkefølgen fagene kommer i, er basert på den som vises i Inschool. <br>Vennligst skriv inn
-            karakterer i skjemaet under.</p>
+        <h1>Siverts Karaktererkalkulator</h1>
+        <p class="info-txt">Dette er en kalkulator for karaktersnitt, laget for 2IMI Kuben VGS. Denne versjonen er en
+            utvidelse av den
+            gamle. Den regner ut snitt basert på alle karakterer, om du går
+            2IMI. Rekkefølgen fagene kommer i, er lik rekkefølgen som vises i Inschool. Fyll ut skjemaet nedenfor og
+            send inn for å regne ut karaktersnitt. <br><br>
+            Hvis du av noen grunn vil eksludere noen fag/karakterer, kan du enkelt og greit la den stå tom. Tomme
+            karakter i skjemaet regnes ikke med i gjennomsnittet.
+        </p>
         <form id="karakter-form">
-
             <fieldset id="this-semester">
-                <legend class="form-section-header">Dette Semesteret</legend>
+                <legend class="form-section__header">Dette Semesteret</legend>
             </fieldset>
 
             <fieldset id="tidligere-standpunkt">
-                <legend class="form-section-header">Tidligere Standpunkt</legend>
+                <legend class="form-section__header">Tidligere Standpunkt</legend>
             </fieldset>
-
             <br>
             <input type="submit" value="Regn ut snitt" id="submit-btn">
         </form>
-
-        <p class="snitt-output">Karaktersnitt:<span id="snitt-output"></span></p>
+        <p class="resultat">Karaktersnitt:<span id="resultat"></span></p>
     </main>
+    <footer>
+        <img class="footer__logo--small" src="./media/s.svg" alt="logo for Sivert M. Hansen">
+        <p>Opphavsrett Sivert M. Hansen &copy; 2026</p>
+    </footer>
+    <script src="./main.js"></script>
 </body>
-<script src="./main.js"></script>
 
 </html>
