@@ -16,4 +16,4 @@
 
 ## Etter Utvidelse
 
-- Tekst: [lenke](lenke)
+- Duckduckgos search assist "how to store form data js": [https://duckduckgo.com/?q=how+to+store+form+data+js](https://duckduckgo.com/?q=how+to+store+form+data+js)

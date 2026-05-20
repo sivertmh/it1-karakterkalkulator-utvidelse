@@ -1,12 +1,13 @@
 // definerer alle globale variabler som trengs til programmet
-const karakterForm = document.querySelector("#karakter-form")
-const thisSemester = document.querySelector("#this-semester")
-const tidligereStandpunkt = document.querySelector("#tidligere-standpunkt")
-const submitBtn = document.querySelector("#submit-btn")
+const karakterForm = document.querySelector("#karakter-form");
+const thisSemester = document.querySelector("#this-semester");
+const tidligereStandpunkt = document.querySelector("#tidligere-standpunkt");
+const ekstraFag = document.getElementById("ekstra-fag");
+const submitBtn = document.querySelector("#submit-btn");
 const resultat = document.querySelector("#resultat");
 var karakterer = document.forms[0];
 let karakterArray = [];
-let totalChecked
+let totalChecked;
 
 // alle karakterer fra dette semesteret (9 stk)
 const thisSemesterArray = [
@@ -31,6 +32,9 @@ const tidligereStandpunktArray = [
     ["Matematikk 1T", "matte1t"]
 ];
 
+// Fag som bruker eventuelt legger til
+const ekstraFagArray = []
+
 function karakterKalk(numStringArray) {
     // metode ved bruk av reduce for å ta sum av tall i array.
     // Akkurat denne linjen er hentet fra Geeksforgeeks (sjekk kilder i readme).
@@ -45,7 +49,6 @@ function karakterKalk(numStringArray) {
         }
     }
 
-    // bruker concat for å sette sammen arrays, så tar den lengden
     // formel for gjennomsnitt
     let karakterSnitt = karakterSum / totalChecked;
 
@@ -109,3 +112,13 @@ submitBtn.addEventListener("click", (x) => {
 // kaller funksjonen to ganger, én gang for hver av de to array-ene og fieldset-ene.
 genForm(thisSemesterArray, thisSemester);
 genForm(tidligereStandpunktArray, tidligereStandpunkt);
+
+const nyttFagForm = document.getElementById("nytt-fag-form");
+nyttFagForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(nyttFagForm);
+    const nyttFagObj = Object.fromEntries(formData);
+
+    console.log(nyttFagForm);
+    console.log(formData);
+})
