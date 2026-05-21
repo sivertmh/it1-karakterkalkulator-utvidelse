@@ -24,7 +24,7 @@ Gi bruker mulighet til å sortere fag basert på ulike faktorer, f.eks. alfabeti
 
 ### Legge til Karakter
 
-Først så la jeg til et ekstra fieldset i HTML. Så måtte jeg hente dette fieldset-et i JS og bruke min ekstisterende genForm-funksjon.
+Først så la jeg til et ekstra fieldset i HTML. Så måtte jeg hente dette fieldset-et i JS og bruke min ekstisterende genForm-funksjon. Den eksisterende funksjonen funker fint, men jeg må gjøre inputet fra brukeren til to input til arrayen, slik at den fungerer riktig med "genForm". Her støtte jeg på problemet at den ble laget hver gang du trykket på knappen, så første gang legger til én, mens andre gang to samtidig. Den vil da få duplikat info, noe jeg absolutt ikke vil.
 
 
 

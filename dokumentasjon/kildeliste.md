@@ -16,4 +16,6 @@
 
 ## Etter Utvidelse
 
-- Duckduckgos search assist "how to store form data js": [https://duckduckgo.com/?q=how+to+store+form+data+js](https://duckduckgo.com/?q=how+to+store+form+data+js)
+- Duckduckgos search assist. *"how to store form data js"*: [https://duckduckgo.com/?q=how+to+store+form+data+js](https://duckduckgo.com/?q=how+to+store+form+data+js)
+
+- *HTML DOM Element removeChild()*: [https://www.w3schools.com/jsref/met_node_removechild.asp](https://www.w3schools.com/jsref/met_node_removechild.asp)

@@ -1,5 +1,4 @@
 // definerer alle globale variabler som trengs til programmet
-const karakterForm = document.querySelector("#karakter-form");
 const thisSemester = document.querySelector("#this-semester");
 const tidligereStandpunkt = document.querySelector("#tidligere-standpunkt");
 const ekstraFag = document.getElementById("ekstra-fag");
@@ -33,7 +32,7 @@ const tidligereStandpunktArray = [
 ];
 
 // Fag som bruker eventuelt legger til
-const ekstraFagArray = []
+let ekstraFagArray = []
 
 function karakterKalk(numStringArray) {
     // metode ved bruk av reduce for å ta sum av tall i array.
@@ -114,11 +113,22 @@ genForm(thisSemesterArray, thisSemester);
 genForm(tidligereStandpunktArray, tidligereStandpunkt);
 
 const nyttFagForm = document.getElementById("nytt-fag-form");
+// Når bruker sender inn ekstra fag
 nyttFagForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(nyttFagForm);
     const nyttFagObj = Object.fromEntries(formData);
+    ekstraFagArray.push(nyttFagObj.fagnavn);
 
     console.log(nyttFagForm);
     console.log(formData);
-})
+    console.log(ekstraFagArray);
+
+    // Sletter alt unntatt overskriften i fieldset med ekstra fag
+    while (ekstraFag.children.length > 1) {
+        ekstraFag.removeChild(ekstraFag.lastChild)
+    }
+    // Lager struktur for ekstra fag, satt i array av brukeren
+    genForm(ekstraFagArray, ekstraFag);
+});
+
