@@ -118,17 +118,24 @@ nyttFagForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(nyttFagForm);
     const nyttFagObj = Object.fromEntries(formData);
-    ekstraFagArray.push(nyttFagObj.fagnavn);
+    let displayName = nyttFagObj.fagnavn
+    // Bruker regex/replace for å lage kodenavn.
+    // Mellomrom blir gjort om til bindestrek.
+    let codeName = displayName.replace(/\s/g, "-")
+    // Legger til fag om brukerens input ikke finnes fra før
+    if (!ekstraFagArray.includes([displayName, codeName])) {
+        ekstraFagArray.push([displayName, codeName]);
 
-    console.log(nyttFagForm);
-    console.log(formData);
-    console.log(ekstraFagArray);
-
-    // Sletter alt unntatt overskriften i fieldset med ekstra fag
-    while (ekstraFag.children.length > 1) {
-        ekstraFag.removeChild(ekstraFag.lastChild)
+        console.log(nyttFagForm);
+        console.log(formData);
+        console.log(ekstraFagArray);
+        // Sletter alt unntatt overskriften i fieldset med ekstra fag
+        while (ekstraFag.children.length > 1) {
+            ekstraFag.removeChild(ekstraFag.lastChild)
+        }
+        // Lager struktur for ekstra fag gitt av bruker
+        genForm(ekstraFagArray, ekstraFag);
+    } else {
+        alert("OBS! Faget du la til finnes fra før")
     }
-    // Lager struktur for ekstra fag, satt i array av brukeren
-    genForm(ekstraFagArray, ekstraFag);
 });
-

@@ -30,4 +30,4 @@ Først så la jeg til et ekstra fieldset i HTML. Så måtte jeg hente dette fiel
 
 ## Kilder
 
-Du finner kildene i dokumentasjonsmappen, i en fil som heter [kildeliste.md](./dokumentasjon/kildeliste.md).
+Du finner kildene i dokumentasjonsmappen, i filen [kildeliste.md](./dokumentasjon/kildeliste.md).

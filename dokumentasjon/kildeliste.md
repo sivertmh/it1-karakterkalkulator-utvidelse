@@ -16,6 +16,10 @@
 
 ## Etter Utvidelse
 
-- Duckduckgos search assist. *"how to store form data js"*: [https://duckduckgo.com/?q=how+to+store+form+data+js](https://duckduckgo.com/?q=how+to+store+form+data+js)
+- Duckduckgos search assist. _how to store form data js_: [https://duckduckgo.com/?q=how+to+store+form+data+js](https://duckduckgo.com/?q=how+to+store+form+data+js)
 
-- *HTML DOM Element removeChild()*: [https://www.w3schools.com/jsref/met_node_removechild.asp](https://www.w3schools.com/jsref/met_node_removechild.asp)
+- _HTML DOM Element removeChild()_: [https://www.w3schools.com/jsref/met_node_removechild.asp](https://www.w3schools.com/jsref/met_node_removechild.asp)
+
+- _How to Remove or Replace All Whitespace from a String in JavaScript_: [https://tutorialreference.com/javascript/examples/faq/javascript-how-to-remove-or-replace-all-whitespace-from-string](https://tutorialreference.com/javascript/examples/faq/javascript-how-to-remove-or-replace-all-whitespace-from-string)
+
+- _JavaScript RegExp_: [https://www.w3schools.com/js/js_regexp.asp#gsc.tab=0](https://www.w3schools.com/js/js_regexp.asp#gsc.tab=0)
